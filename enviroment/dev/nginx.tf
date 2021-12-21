@@ -1,11 +1,19 @@
 resource "helm_release" "nginx_ingress" {
-  name = "nginx-ingress-controller"
+  name = "nginx"
 
   repository = "https://charts.bitnami.com/bitnami"
-  chart      = "nginx-ingress-controller"
+  chart      = "nginx"
 
   set {
     name  = "service.type"
-    value = "ClusterIP"
+    value = "NodePort"
+  }
+  set {
+    name  = "ingress.hostname"
+    value = "nginx.test"
+  }
+  set {
+    name  = "ingress.path"
+    value = "/*"
   }
 }
