@@ -16,4 +16,8 @@ resource "helm_release" "nginx_ingress" {
     name  = "ingress.path"
     value = "/*"
   }
+  set {
+    name  = "replicaCount"
+    value = 3
+  }
 }

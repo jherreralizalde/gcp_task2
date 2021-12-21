@@ -25,11 +25,5 @@ module "gke_task2" {
       auto_upgrade    = true
     }
   ]
-  #master_authorized_networks = [
-  #  {
-  #  cidr_block   = "0.0.0.0/0"
-  #    display_name = "VPC"
-  #  }
-  #]
 }
 
