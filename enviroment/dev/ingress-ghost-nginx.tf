@@ -5,7 +5,7 @@ resource "kubernetes_ingress_v1" "example_ingress" {
 
   spec {
     rule {
-      host = "ghost.test"  
+      host = "ghost.test"
       http {
         path {
           backend {
@@ -21,8 +21,8 @@ resource "kubernetes_ingress_v1" "example_ingress" {
         }
       }
     }
-  rule {
-      host = "nginx.test"  
+    rule {
+      host = "nginx.test"
       http {
         path {
           backend {
